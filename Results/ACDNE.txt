@@ -1,0 +1,2 @@
+(Using  640  most similar nodes for each key actor  36.354581673306775  percent of the nodes where in the top  10  percent according to  eigenvector)
+(Using  640  most similar nodes for each key actor  40.438247011952186  percent of the nodes where in the top  10  percent according to  pagerank)
