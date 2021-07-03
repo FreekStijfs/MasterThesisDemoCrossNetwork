@@ -14,19 +14,21 @@ from Utils.Graph_Analyzer import Embedding_creator
 
 """Specify model being used, as well as its hyper parameters and the location of the embeddings/results to be stored"""
 '''----------------------------------------------------------------------------------------------------------------'''
+#does not have to be speficied for DRNE or ACDNE
 model = None
 has_attributes = False
 embeddings_known = True
 ACDNE_used = True
 if ACDNE_used:
     location_embeddings_acdne = "../Data/enron_euemb.mat"
-
 if has_attributes:
     with open('../pickle_temporary_data/attr_matrix_enron.pickle',
             'rb') as f:
         attr_matrix = pickle.load(f)
-
 location_results = "../Results/ACDNE.txt"
+#do not have to be specified for ACDNE
+location_embedding_network1 = None
+location_embedding_network2 = None
 
 '''----------------------------------------------------------------------------------------------------------------'''
 
@@ -35,12 +37,13 @@ location_results = "../Results/ACDNE.txt"
 network1 = nx.read_gexf("../Data/Complete_graph.gexf")
 network_largest_component = max(nx.connected_components(network1), key=len)
 network1 = network1.subgraph(network_largest_component)
-location_embedding_network1 = "../Data/embedding_grarep_network1.npy"
 
-network2 = nx.read_gexf("../Data/Largest_subGraph_graph_Marvel.gexf")
-network_largest_component = max(nx.connected_components(network2), key=len)
-network2 = network2.subgraph(network_largest_component)
-location_embedding_network2 = "../Data/embedding_grarep_network2.npy"
+if embeddings_known:
+    network2 = nx.read_gexf("../Data/Complete_graph_eu.gexf")
+else:
+    network2 = nx.read_gexf("../Data/Complete_graph_eu.gexf")
+    network_largest_component = max(nx.connected_components(network2), key=len)
+    network2 = network2.subgraph(network_largest_component)
 
 '''----------------------------------------------------------------------------------------------------------------'''
 
