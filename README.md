@@ -14,9 +14,8 @@ Required packages:
 
 In order to run this code. Make sure you have imported the required data from:
 
-https://drive.google.com/file/d/1BdVfoH77G1X0gyBPVBfScMR0iGVBOr7W/view?usp=sharing and,
-
-https://drive.google.com/file/d/1b8BWx_EReYlWgbMleP_pExbJGHGzBVJd/view?usp=sharing
+https://drive.google.com/file/d/1QA1U-PO0N8stWBCkkKfuU6sQb0ZLqrrX/view?usp=sharing and,
+https://drive.google.com/file/d/1fCJQv-spdTAXVYXF9-L95JGJ2kTvT6cZ/view?usp=sharing
 
 These directories were to big to be imported to github, but include the Data and temporary pickle directory which include the communication data set.
 
